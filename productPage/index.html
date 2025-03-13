@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row" id="productContainer"></div>
+    </div>
+
+    <script>
+        let makeup = [
+            ["Face"],
+            ["foundations"],
+            ["eyeMakeup"],
+            ["lips"],
+            ["nails"],
+            ["weddingKit"]
+
+        ]
+
+        let html = "";
+        for(let data of makeup){
+            html +=` <div class="col lg-6 md-4 sm-1 mb-4">
+        <div class="card shadow-lg">
+            <img src="" alt="" class="card-img-top">
+            <div class="card-body text-center">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </div>`
+        }
+        document.getElementById("productContainer")
+        innerHTML = html
+    </script>
+   
+</body>
+<script src="assets/jquery/jquery.js"></script>
+<script src="assets/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</html>
