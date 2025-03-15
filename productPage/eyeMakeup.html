@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Makeup</title>
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+</head>
+<style>
+    .card-img-top{
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+        background-color: whitesmoke;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row " id="eContainer"></div>
+    </div>
+<img src="" alt="">
+
+    <script>
+        let eyeMakeup = [
+            ["Mascara", "assets/images/red.webp"],
+            ["Eye Liner", "assets/images/eyeLiner.webp"],
+            ["Eye palet", "assets/images/eye palet.webp"],
+            ["Eye shadow", "assets/images/black eyeShadow.webp"],
+            ["Brows", "assets/images/brows.webp"]
+        ]
+        let html = "";
+        for (let data of eyeMakeup){
+            html += ` <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                    <img src="${data[1]}" alt="${data[0]}" class="card-img-top" >
+                   <p class = "mt-2">${data[0]}</p>
+            </div>`
+        }
+        document.getElementById("eContainer").innerHTML = html;
+
+    </script>
+    <script src="assets/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
