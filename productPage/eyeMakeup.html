@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,98 +8,94 @@
     <link rel="stylesheet" href="assets/bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
 </head>
 <style>
-    body{
-        overflow-x: hidden;
-    }
-    .page-top{
+    .header-container {
         position: relative;
         width: 100%;
-        display: inline;
+        display: flex;
         overflow: hidden;
     }
-    .page-top img{
+
+    .page-top {
+        width: 100%;
+        position: relative;
+    }
+
+    .page-top img {
         width: 100%;
         height: auto;
         object-fit: cover;
     }
+
     .page-top span {
         position: absolute;
         top: 50%;
-        left: 30%;
-        color:black;
+        left: 20%;
+        color: black;
         padding: 10px 20px;
-        font-size: 24px;
-        font-weight: bold;
+        font-size: 30px;
+        font-weight: 600px;
         border-radius: 5px;
     }
-    #eContainer{
-        margin-bottom: 15px;
+
+    .top-para {
+        font-size: 14px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        line-height: 23px;
     }
-    .card-img-top{
+    .filter-icons-container{
+        padding-top: 40px;
+    }
+
+    #eContainer {
+        margin-bottom: 15px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-img-top {
         border-radius: 50%;
         width: 90px;
         height: 90px;
         object-fit: cover;
         background-color: whitesmoke;
     }
-    .card {
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out; 
-    height: 100%; 
-    display: flex;
-    flex-direction: column;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.mascara-card-img-top {
-    height: 250px; 
-    object-fit: cover; 
-}
-
-.card-body {
-    flex-grow: 1; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-}
-
 </style>
+
 <body>
     <!-- header -->
-     <div class="container">
-     <div class="page-top">
-        <img src="assets/images/eyemakeupheader.webp" alt="" >
-        <span><strong>Eye Makeup</strong></span>
-     </div>
+    <div col-lg-8 col-md-10 col-sm-12 class="header-container">
+        <div class="page-top">
+            <img src="assets/images/eyemakeupheader.webp" alt="">
+            <span><strong>Eye <br><b> Makeup </b></strong></span>
+        </div>
+    </div>
+    <div class="col-lg-8 col-md-10 col-sm-12 mx-auto text-center" class="top-para">
+        <p>CHANEL eye makeup reveals the intensity in your eyes.
+            CHANEL eyeshadows, mascaras, palettes, and eyeliners come in different shades and textures to offer makeup
+            looks that range from natural to sophisticated. CHANEL eye makeup creations provide intuitive ways to
+            accentuate your eyes.
+        </p>
     </div>
 
-
-    <div class="container">
+    <div class="filter-icons-container">
         <div class="row " id="eContainer"></div>
     </div>
-
-    <!-- mascara -->
-    <div class="container">
-        <div class="row" id="mascara-container"></div>
-    </div>
+    <div class="row" id="products-container"></div>
     <!-- Add to cart -->
-     <div class="add-to-cart">
+    <div class="add-to-cart">
 
-     </div>
+    </div>
     <script>
         let eyeMakeup = [
-            ["Mascara", "assets/images/red.webp"],
-            ["Eye Liner", "assets/images/eyeLiner.webp"],
-            ["Eye palet", "assets/images/eye palet.webp"],
-            ["Eye shadow", "assets/images/black eyeShadow.webp"],
-            ["Brows", "assets/images/brows.webp"]
+            [ "Mascara", "assets/images/red.webp"],
+            [ "Eye Liner", "assets/images/eyeLiner.webp" ],
+            [ "Eye palet", "assets/images/eye palet.webp" ],
+            [ "Eye shadow", "assets/images/black eyeShadow.webp"],
+            [ "Brows", "assets/images/brows.webp"]
         ]
         let html = "";
-        for (let data of eyeMakeup){
+        for (let data of eyeMakeup) {
             html += ` <div class="col-lg-2 col-md-3 col-sm-4 col-6">
                     <img src="${data[1]}" alt="${data[0]}" class="card-img-top" >
                    <p class = "mt-2">${data[0]}</p>
@@ -106,34 +103,47 @@
         }
         document.getElementById("eContainer").innerHTML = html;
 
-        // mascara
-        let mascara = [
-           
-        ["NOIR ALLURE", "assets/images/red.webp" , "Mascara" , "ALL-IN-ONE MASCARA: VOLUME, LENGTH, CURL AND DEFINITION" , "Rs. 4,550"],
-        ["LE VOLUME DE CHANEL", "assets/images/dark black.webp" , "Mascara", "DEFINITION AND SMUDGEPROOF MASCARA 10 - NOIR", "Rs. 4,150"],
-        ["INIMITABLE EXTRÊME", "assets/images/inimitable.webp" , "Mascara", "Volume Length Curl Separation - Extreme Wear Rinsable", "Rs. 4,100" ],
-        ["LA BASE MASCARA", "assets/images/basemascara.webp" , "Mascara", "VOLUME AND CARE LASH PRIMER" , "Rs. 4,150" ]
+        // Makeup Products
+        let MakeupProducts = [
+            { name: "NOIR ALLURE", Image: "assets/images/red.webp", category: "Mascara", details: "ALL-IN-ONE MASCARA: VOLUME, LENGTH, CURL AND DEFINITION", price: "Rs. 4,550" },
+            { name: "LE VOLUME DE CHANEL", Image: "assets/images/dark black.webp", category: "Mascara", details: "DEFINITION AND SMUDGEPROOF MASCARA 10 - NOIR", price: "Rs. 4,150" },
+            { name: "INIMITABLE EXTRÊME", Image: "assets/images/inimitable.webp", category: "Mascara", details: "Volume Length Curl Separation - Extreme Wear Rinsable", price: "Rs. 4,100" },
+            { name: "LA BASE MASCARA", Image: "assets/images/basemascara.webp", category: "Mascara", details: "VOLUME AND CARE LASH PRIMER", price: "Rs. 4,150" },
+            { name: "LE LINER DE CHANEL", Image: "assets/images/eyeLiner.webp", details: "HIGH PRECISION LONGWEARING ", price: "Rs.4,100 " },
+            { name: "SIGNATURE DE CHANEL", Image: "assets/images/signature liner.webp", category: "Eyeliner", details: "PRECISE, INTENSE, WATERPROOF EYELINER PENCIL", price: "Rs.4,150" },
+            { name: "LES BEIGES EYESHADOW PALETTE", Image: "assets/images/eye palet.webp", category: "Eyeshadow", details: "HEALTHY GLOW NATURAL EYESHADOW PALETTE ", price: "Rs.6,600 " },
+            { name: "OMBRE ESSENTIELLE", Image: "assets/images/one shade.webp",category: "Eyeshadow", details: "MULTI-USE LONGWEARING EYESHADOW", price: "Rs. 3,950" },
 
+
+            { name: "JEUX DE LUMIÈRES", Image: "assets/images/+heighlighter.webp", category: "EYESHADOW ", details: "MULTI-USE EYESHADOW AND HIGHLIGHTER PALETTE", price: "Rs. 8,450" },
+            { name: "LES 4 OMBRES", Image: "assets/images/inimitable.webp", category: "EYESHADOW ", details: "MULTI-EFFECT QUADRA EYESHADOW", price: "Rs. 6,300" },
+            { name: "LA BASE MASCARA", Image: "assets/images/basemascara.webp", category: "EYESHADOW ", details: "VOLUME AND CARE LASH PRIMER", price: "Rs. 4,150" },
+            { name: "JEUX DE LUMIÈRES ", Image: "assets/images/+heighlighter.webp", details: "MULTI-USE EYESHADOW AND HIGHLIGHTER PALETTE", price: "Rs.8,450" },
+            { name: "LES 4 OMBRES", Image: "assets/images/dark black.webp", category: "EYESHADOW ", details: "DEFINITION AND SMUDGEPROOF MASCARA 10 - NOIR", price: "Rs. 4,150" },
+            { name: "INIMITABLE EXTRÊME", Image: "assets/images/inimitable.webp", category: "EYESHADOW ", details: "Volume Length Curl Separation - Extreme Wear Rinsable", price: "Rs. 4,100" },
+            { name: "LA BASE MASCARA", Image: "assets/images/basemascara.webp", category: "EYESHADOW ", details: "VOLUME AND CARE LASH PRIMER", price: "Rs. 4,150" }
         ]
-        let html2 ="";
-        for (let data of mascara) {
-        html2 += `
-        <div class="col-lg-3 col-md-4 col-sm-12 mb-4">
+        let html1 = "";
+        for (let data of MakeupProducts) {
+        html1 += `
+        <div class="col-md-4 mb-4">
             <div class="card shadow-lg">
-                <img src="${data[1]}" class="mascara-card-img-top" alt="${data[0]}">
+                <img src="${data.Image}" class="card-img-top" alt="${data.name}">
                 <div class="card-body text-center">
-                    <h5 class="card-title">${data[0]}</h5>
-                    <p class="card-text">${data[2]}</p>
-                    <p class="card-text">${data[3]}</p>
-                    <p class="card-price">${data[4]}</p>
+                    <h5 class="card-title">${data.name}</h5>
+                    <p class="card-text">${data.details}</p>
+                    <p class="card-text"><strong>${data.price}</strong> </p>
                 </div>
             </div>
         </div>`;
+        // console.log(html1)
     }
-    document.getElementById("mascara-container").innerHTML = html2;
+    document.getElementById("products-container").innerHTML = html1
 
-       </script>
+
+    </script>
     <script src="assets/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-    
+    <img src="" alt="">
 </body>
+
 </html>

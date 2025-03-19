@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Makeup</title>
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        .header-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .page-top {
+            width: 100%;
+            position: relative;
+        }
+
+        .page-top img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .page-top span {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            color: black;
+            padding: 10px 20px;
+            font-size: 30px;
+            font-weight: 600px;
+            border-radius: 5px;
+        }
+
+        .top-para {
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 23px;
+        }
+
+        .card {
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+            padding: 10px;
+        }
+
+        .category-btns .btn {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header-container">
+        <div class="page-top">
+            <img src="assets/images/eyemakeupheader.webp" alt="">
+            <span><strong>Eye <br><b> Makeup </b></strong></span>
+        </div>
+    </div>
+
+    <!-- Top Paragraph -->
+    <div class="col-lg-8 col-md-10 col-sm-12 mx-auto text-center top-para">
+        <p>CHANEL eye makeup reveals the intensity in your eyes.
+            CHANEL eyeshadows, mascaras, palettes, and eyeliners come in different shades and textures to offer makeup looks that range from natural to sophisticated. CHANEL eye makeup creations provide intuitive ways to accentuate your eyes.
+        </p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="container text-center mt-3">
+        <div class="category-btns">
+            <button class="btn btn-dark" onclick="filterItems('all')">All</button>
+            <button class="btn btn-primary" onclick="filterItems('eyeshadow')">Eye Shadow</button>
+            <button class="btn btn-danger" onclick="filterItems('mascara')">Mascara</button>
+            <button class="btn btn-success" onclick="filterItems('eyeliner')">Eye Liner</button>
+            <button class="btn btn-warning" onclick="filterItems('palette')">Eye Palette</button>
+        </div>
+    </div>
+
+    <!-- Products Container -->
+    <div class="container mt-4">
+        <div class="row" id="products-container"></div>
+    </div>
+
+    <script>
+        // Makeup Products Data
+        const makeupItems = [
+            { name: "Smokey Eye Shadow", category: "eyeshadow", image: "assets/images/black eyeShadow.webp", desc: "Bold smokey finish", price: "Rs. 4,500" },
+            { name: "Glitter Eye Shadow", category: "eyeshadow", image: "assets/images/one shade.webp", desc: "Glittery shimmer shade", price: "Rs. 5,200" },
+            { name: "Waterproof Mascara", category: "mascara", image: "assets/images/dark black.webp", desc: "Smudge-proof long wear", price: "Rs. 4,150" },
+            { name: "Volume Mascara", category: "mascara", image: "assets/images/inimitable.webp", desc: "Extreme volume", price: "Rs. 4,100" },
+            { name: "Signature Eye Liner", category: "eyeliner", image: "assets/images/signature liner.webp", desc: "Intense waterproof formula", price: "Rs. 4,150" },
+            { name: "Nude Palette", category: "palette", image: "assets/images/eye palet.webp", desc: "Natural everyday look", price: "Rs. 6,600" }
+        ];
+
+        // Function to Render Items
+        function filterItems(category) {
+            const container = document.getElementById("products-container");
+            container.innerHTML = ""; // Clear previous items
+
+            // Filter items based on category
+            const filteredItems = category === "all" ? makeupItems : makeupItems.filter(item => item.category === category);
+
+            // Render items dynamically
+            filteredItems.forEach(item => {
+                const productHTML = `
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="card shadow-lg">
+                            <img src="${item.image}" class="card-img-top" alt="${item.name}">
+                            <div class="card-body">
+                                <h5 class="card-title">${item.name}</h5>
+                                <p class="card-text">${item.desc}</p>
+                                <p class="card-price text-danger">${item.price}</p>
+                                <button class="btn btn-outline-dark">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += productHTML;
+            });
+        }
+
+        // Load all items initially
+        filterItems("all");
+    </script>
+
+    <script src="assets/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
