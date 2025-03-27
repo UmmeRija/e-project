@@ -280,26 +280,23 @@
             <!-- </div> -->
         </div>
     </div>
-    modal for Checkout
+  <!-- Modal for Checkout -->
 <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <!-- <h5 class="modal-title" id="checkoutModalLabel">Your order has been successfully placed. </h5>
-          -->
+        <div class="modal-content" style="background: linear-gradient(145deg, #E6A5C4 , white); color: #b24242; border: 1px solid rgb(161, 29, 73);">
+            <div class="modal-header">
+                <h5 class="modal-title" id="checkoutModalLabel">Order placed.</h5>
+            </div>
+            <div class="modal-body">
+                Thank you for shopping at Simplon!
+            </div>
         </div>
-        <div class="modal-body">
-          Thank you!
-        </div>
-        
-      </div>
     </div>
-  </div>
-  
+</div>
 
     <script>
         let eyeMakeup = [
-            ["Mascara", "assets/images/red.webp"],
+            ["Mascara", "assets/images/red muscara.webp"],
             ["Eye Liner", "assets/images/eyeLiner.webp"],
             ["Eye palet", "assets/images/eye palet.webp"],
             ["Eyeshadow", "assets/images/black eyeShadow.webp"],
@@ -318,7 +315,7 @@
 
         // Makeup Products
         let MakeupProducts = [
-            { name: "NOIR ALLURE", Image: "assets/images/red.webp", category: "Mascara", details: "ALL-IN-ONE MASCARA: VOLUME, LENGTH, CURL AND DEFINITION", price: "Rs. 4,550" },
+            { name: "NOIR ALLURE", Image: "assets/images/red muscara.webp", category: "Mascara", details: "ALL-IN-ONE MASCARA: VOLUME, LENGTH, CURL AND DEFINITION", price: "Rs. 4,550" },
             { name: "LE VOLUME DE CHANEL", Image: "assets/images/dark black.webp", category: "Mascara", details: "DEFINITION AND SMUDGEPROOF MASCARA 10 - NOIR", price: "Rs. 4,150" },
             { name: "INIMITABLE EXTRÊME", Image: "assets/images/inimitable.webp", category: "Mascara", details: "Volume Length Curl Separation - Extreme Wear Rinsable", price: "Rs. 4,100" },
             { name: "LA BASE MASCARA", Image: "assets/images/basemascara.webp", category: "Mascara", details: "VOLUME AND CARE LASH PRIMER", price: "Rs. 4,150" },
@@ -436,6 +433,9 @@
     // modal
     var checkoutModal = new bootstrap.Modal(document.getElementById('checkoutModal'));
     checkoutModal.show();
+    document.getElementById('checkoutModal').addEventListener('click', function () {
+        window.location.reload();
+    });
 
             // alert("Thanks for shopping!");
             // window.location.reload(); // Reloads the page
