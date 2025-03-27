@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
 </head>
 <style>
+   
     /* body{
         background-color: #adbbda;
     } */
@@ -240,11 +241,14 @@
 
 <body>
     <!-- header -->
-    <div col-lg-8 col-md-10 col-sm-12 class="header-container">
-        <div class="page-top">
-            <img src="assets/images/mainEyemakeup.jpeg" alt="">
+   <div class="container-fluid">
+    <div class="row">
+        <div  class="header-container col-lg-8 col-md-10 col-sm-12">
+            <div class="page-top">
+                <img src="assets/images/mainEyemakeup.jpeg" alt="">
+            </div>
         </div>
-    </div>
+   
     <div class="col-lg-8 col-md-10 col-sm-12 mx-auto text-center" class="top-para">
         <p>CHANEL eye makeup reveals the intensity in your eyes.
             CHANEL eyeshadows, mascaras, palettes, and eyeliners come in different shades and textures to offer makeup
@@ -293,6 +297,8 @@
         </div>
     </div>
 </div>
+</div>
+</div>
 
     <script>
         let eyeMakeup = [
@@ -339,7 +345,8 @@
         let html1 = "";
         MakeupProducts.forEach((product, index) => {
             html1 += `
-            <div class="filter-cards col-lg-3 col-md-4 col-sm-12 mb-4 d-flex ">
+           
+            <div class="filter-cards col-lg-4 col-md-3 col-sm-12 mb-4 d-flex ">
              <div class="card shadow-sm" style="width: 100%; max-width: 280px;">
                <img src="${product.Image}" class="card-img-top-product" alt="${product.name}">
                <div class="card-body text-center">
@@ -347,12 +354,14 @@
                 <p class="card-text-product">${product.details}</p>
                 <p class="card-text-product">${product.price}</p>
                     <button onclick="addToCart(${index})" class="btn-add-cart" >Add to card</button>
-        </div>
+       
+         </div>
     </div>
 </div>`;
 
         })
         document.getElementById("products-container").innerHTML = html1
+        
 
         // Add to cart
         let cart = [];
