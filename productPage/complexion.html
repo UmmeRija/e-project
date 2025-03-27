@@ -253,7 +253,9 @@
         </div>
     </div>
     <div class="col-lg-8 col-md-10 col-sm-12 mx-auto text-center" class="top-para">
-        <p>CHANEL makeup provides a natural and radiant look. Chanel primers pave the way for foundation. Concealers hide imperfections. Liquid, cream, and powder foundations ensure a flawless complexion. Blushes add a touch of color to the cheeks. Illuminating powders give the face instant radiance.
+        <p>CHANEL makeup provides a natural and radiant look. Chanel primers pave the way for foundation. Concealers
+            hide imperfections. Liquid, cream, and powder foundations ensure a flawless complexion. Blushes add a touch
+            of color to the cheeks. Illuminating powders give the face instant radiance.
         </p>
         <div class="space-line"></div>
     </div>
@@ -284,18 +286,17 @@
             <!-- </div> -->
         </div>
     </div>
-    modal for Checkout
+    <!-- Modal for Checkout -->
     <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content"
+                style="background: linear-gradient(145deg, #E6A5C4 , white); color: #b24242; border: 1px solid rgb(161, 29, 73);">
                 <div class="modal-header">
-                    <!-- <h5 class="modal-title" id="checkoutModalLabel">Your order has been successfully placed. </h5>
-          -->
+                    <h5 class="modal-title" id="checkoutModalLabel">Order placed.</h5>
                 </div>
                 <div class="modal-body">
-                    Thank you!
+                    Thank you for shopping at Simplon!
                 </div>
-
             </div>
         </div>
     </div>
@@ -324,7 +325,7 @@
         let MakeupProducts = [
             { name: "LES BEIGES FOUNDATION", Image: "assets/images/foundation logo.webp", category: "foundation", details: "HEALTHY GLOW FOUNDATION HYDRATION AND LONGWEAR", price: "Rs. 5,750" },
             { name: "ULTRA LE TEINT VELVET", Image: "assets/images/longwearfoundation.webp", category: "foundation", details: "ULTRA-LIGHT AND LONGWEARING FORMULA WITH A BLURRING MATTE FINISH FOR A PERFECT, NATURAL COMPLEXION", price: "Rs. 4,150" },
-            
+
             { name: "LES BEIGES", Image: "assets/images/gel touch.webp", category: "foundation", details: "HEALTHY GLOW GEL TOUCH FOUNDATION", price: "Rs. 5,500" },
             { name: "ULTRA LE TEINT FLUIDE", Image: "assets/images/comferted foundation.webp", category: "foundation", details: "ULTRAWEAR – ALL-DAY COMFORT – FLAWLESS FINISH FOUNDATION", price: "Rs. 4,100" },
             { name: "BOY DE CHANEL FOUNDATION", Image: "assets/images/longwearing complexion.webp", category: "faundation", details: "SUBTLE AND LONGWEARING COMPLEXION ENHANCER", price: "Rs. 4,150" },
@@ -332,13 +333,13 @@
             { name: "ULTRA LE TEINT", Image: "assets/images/flawless faceaapowder.webp", category: "foundation", details: "ULTRAWEAR – ALL–DAY COMFORT FLAWLESS FINISH COMPACT FOUNDATION", price: "Rs.4,150" },
             { name: "VITALUMIÈRE AQUA", Image: "assets/images/ultra-light.webp", category: "FOUNDATION", details: "ULTRA-LIGHT SKIN PERFECTING MAKEUP SPF 15ULTRA-LIGHT SKIN PERFECTING MAKEUP SPF 15", price: "Rs.4,750" },
             { name: "LES BEIGES WATER-FRESH TINT", Image: "assets/images/water frsh tnt.webp", category: "FOUNDATION", details: "WATER-FRESH TINT WITH MICRO-DROPLET PIGMENTS. BARE SKIN EFFECT. NATURAL AND LUMINOUS HEALTHY GLOW.", price: "Rs. 11,800" },
-            
+
             { name: "SUBLIMAGE L'ESSENCE DE TEINT", Image: "assets/images/scrum teint.webp", category: "foundation", details: "ULTIMATE RADIANCE-GENERATING SERUM FOUNDATION", price: "Rs. 4,100" },
             { name: "SUBLIMAGE LE TEINT", Image: "assets/images/teint creem.webp", category: "FOUNDATION", details: "ULTIMATE RADIANCE-GENERATING CREAM FOUNDATION", price: "Rs. 4,750" },
             { name: "N°1 DE CHANEL REVITALIZING FOUNDATION", Image: "assets/images/hydrates foundation.webp", category: "FOUNDATION", details: "ILLUMINATES - HYDRATES - PROTECTS", price: "Rs.3,800" },
             { name: "CC CREAM", Image: "assets/images/cc cream.webp", category: "FOUNDATION", details: "SUPER ACTIVE COMPLETE CORRECTION SPF 50", price: "Rs.3,800" },
             { name: "ULTRA LE TEINT - REFILL", Image: "assets/images/all day wear facePowder.webp", category: "FOUNDATION", details: "ULTRAWEAR – ALL–DAY COMFORT FLAWLESS FINISH COMPACT FOUNDATION", price: "Rs. 3,950" },
-            
+
             { name: "LES BEIGES HEALTHY GLOW LIP BALM", Image: "assets/images/blush logo.webp", category: "blush", details: "HYDRATING LIP CARE WITH A SUBTLE HEALTHY", price: "Rs. 3,950" },
             { name: "ROUGE ALLURE", Image: "assets/images/intense lip color.webp", category: "blush", details: "LUMINOUS INTENSE LIP COLOUR", price: "Rs. 4,750" },
             { name: "N°1 DE CHANEL LIP AND CHEEK BALM", Image: "assets/images/color enhancer.webp", category: "blush", details: "     ENHANCES COLOUR - NOURISHES -PLUMPS", price: "Rs. 4,750" },
@@ -443,9 +444,12 @@
             // modal
             var checkoutModal = new bootstrap.Modal(document.getElementById('checkoutModal'));
             checkoutModal.show();
+            document.getElementById('checkoutModal').addEventListener('click', function () {
+                window.location.reload();
+            });
 
             // alert("Thanks for shopping!");
-            window.location.reload(); // Reloads the page
+            // window.location.reload(); // Reloads the page
         }
 
 
