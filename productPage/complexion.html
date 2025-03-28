@@ -6,263 +6,293 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complextion Makeup</title>
     <link rel="stylesheet" href="assets/bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <style>
+        /* body {
+            background-color: #adbbda;
+        } */
+        .header-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .page-top {
+            width: 100%;
+            position: relative;
+        }
+
+        .page-top img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            margin-bottom: 30px;
+        }
+
+        .top-para {
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 23px;
+            /* margin-bottom: 50px; */
+        }
+
+        .filter-icons-container {
+            padding-top: 80px;
+        }
+
+        #eContainer {
+            margin-bottom: 15px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card-img-top {
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            background-color: whitesmoke;
+        }
+
+        .filter-btn {
+            border: 1px solid #f6cae0;
+        }
+
+        #products-container {
+            margin-top: 20px;
+        }
+
+        .card-product {
+            width: 100%;
+            max-width: 280px;
+            min-height: 360px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .card-img-top-product {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        /* Hover effect */
+        .card:hover .card-img-top-product {
+            border-bottom: 3px solid black;
+            padding-bottom: 5px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .card-title-product {
+            font-size: 18px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .card-text-product {
+            font-size: 14px;
+            margin-top: auto;
+        }
+
+        .card {
+            /* color: var(--color1); */
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(145deg, #e6b7a2, white);
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(145deg, #E6A5C4, white);
+        }
+
+        .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+        .btn-add-cart {
+            background-color: white;
+            color: black;
+            border: 1px solid whitesmoke;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            width: 100%;
+            max-width: 150px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .btn-add-cart:hover {
+            background-color: #f6cae0;
+            transform: scale(1.05);
+        }
+
+        .add-to-cart-container {
+            display: none;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 300px;
+            height: 100vh;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .slidebar {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            background: linear-gradient(145deg, #E6A5C4, white);
+            margin-left: 20px;
+            padding: 15px;
+            text-align: center;
+            /* background-color: #8697C4; */
+        }
+
+        .head {
+            background-color: rgb(161, 29, 73);
+            border-radius: 3px;
+            height: 50px;
+            /* padding: 10px; */
+            /* margin-bottom: 20px; */
+            color: white;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .head p {
+            color: white;
+            font-weight: bolder;
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0px;
+            padding: 10px 0px;
+            border-top: 1px solid;
+        }
+
+        .foot h3 {
+            color: rgb(161, 29, 73);
+        }
+
+        .foot #total {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            color: rgb(161, 29, 73);
+        }
+
+        .btn-remove {
+            color: white;
+            font-weight: bold;
+            background-color: rgb(161, 29, 73);
+        }
+
+        .btn-checkout {
+            color: white;
+            font-weight: bold;
+            background-color: rgb(161, 29, 73);
+        }
+
+        .space-line {
+            border: 1px solid;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .modal-body {
+            font-family: "Segoe UI"
+        }
+
+        @media (max-width: 768px) {
+            .page-top img {
+                height: 300px;
+            }
+
+            .card-img-top {
+                width: 70px;
+                height: 70px;
+            }
+
+            .page-top img {
+                margin-bottom: 20px;
+            }
+
+            .filter-icons-container {
+                padding-top: 40px;
+            }
+
+            .filter-cards {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
-<style>
-    /* body{
-        background-color: #adbbda;
-    } */
-    .header-container {
-        position: relative;
-        width: 100%;
-        display: flex;
-        overflow: hidden;
-    }
-
-    .page-top {
-        width: 100%;
-        position: relative;
-    }
-
-    .page-top img {
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-        margin-bottom: 30px;
-    }
-
-    .top-para {
-        font-size: 14px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        line-height: 23px;
-        /* margin-bottom: 50px; */
-    }
-
-    .filter-icons-container {
-        padding-top: 80px;
-    }
-
-    #eContainer {
-        margin-bottom: 15px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .card-img-top {
-        border-radius: 50%;
-        width: 90px;
-        height: 90px;
-        object-fit: cover;
-        background-color: whitesmoke;
-    }
-
-    .filter-btn {
-        border: 1px solid #f6cae0;
-
-    }
-
-    #products-container {
-        margin-top: 20px;
-    }
-
-    .card-product {
-        width: 100%;
-        max-width: 280px;
-        min-height: 360px;
-        text-align: center;
-        padding: 15px;
-        border-radius: 10px;
-        transition: 0.3s ease-in-out;
-    }
-
-    .card-img-top-product {
-        width: 100%;
-        height: 180px;
-        object-fit: contain;
-        border-radius: 8px;
-    }
-
-    /* Hover effect */
-    .card:hover .card-img-top-product {
-        border-bottom: 3px solid black;
-        padding-bottom: 5px;
-        transition: 0.3s ease-in-out;
-    }
-
-    .card-title-product {
-        font-size: 18px;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-    }
-
-    .card-text-product {
-        font-size: 14px;
-        margin-top: auto;
-
-    }
-
-    .card {
-        /* color: var(--color1); */
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background: linear-gradient(145deg, #e6b7a2, white);
-    }
-
-    .card:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        background: linear-gradient(145deg, #E6A5C4, white);
-    }
-
-    .card-body {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .card {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .card-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 1;
-    }
-
-    .btn-add-cart {
-        background-color: white;
-        color: black;
-        border: 1px solid whitesmoke;
-        padding: 10px 15px;
-        font-size: 14px;
-        font-weight: bold;
-        border-radius: 20px;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        width: 100%;
-        max-width: 150px;
-        text-align: center;
-        margin-top: auto;
-    }
-
-    .btn-add-cart:hover {
-        background-color: #f6cae0;
-        transform: scale(1.05);
-    }
-
-    .add-to-cart-container {
-        display: none;
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 300px;
-        height: 100vh;
-        padding: 20px;
-        overflow-y: auto;
-    }
-
-    .slidebar {
-        width: 100%;
-        height: auto;
-        border-radius: 5px;
-        background: linear-gradient(145deg, #E6A5C4, white);
-        margin-left: 20px;
-        padding: 15px;
-        text-align: center;
-        /* background-color: #8697C4; */
-    }
-
-    .head {
-        background-color: rgb(161, 29, 73);
-        border-radius: 3px;
-        height: 50px;
-        /* padding: 10px; */
-        /* margin-bottom: 20px; */
-        color: white;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        margin-top: 15px;
-
-    }
-
-    .head p {
-        color: white;
-        font-weight: bolder;
-    }
-
-    .foot {
-        display: flex;
-        justify-content: space-between;
-        margin: 20px 0px;
-        padding: 10px 0px;
-        border-top: 1px solid;
-
-    }
-
-    .foot h3 {
-        color: rgb(161, 29, 73);
-    }
-
-    .foot #total {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-weight: bolder;
-        color: rgb(161, 29, 73);
-    }
-
-    .btn-remove {
-        color: white;
-        font-weight: bold;
-        background-color: rgb(161, 29, 73);
-    }
-
-    .btn-checkout {
-        color: white;
-        font-weight: bold;
-        background-color: rgb(161, 29, 73);
-    }
-
-    .space-line {
-        border: 1px solid;
-        width: 100%;
-        margin-top: 30px;
-    }
-
-    .modal-body {
-        font-family: "Segoe UI"
-    }
-</style>
 
 <body>
     <!-- header -->
-    <div col-lg-8 col-md-10 col-sm-12 class="header-container">
-        <div class="page-top">
-            <img src="assets/images/mainFace.jpeg" alt="">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 px-0">
+                <div class="header-container">
+                    <div class="page-top">
+                        <img src="assets/images/mainFace.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col-lg-8 col-md-10 col-sm-12 mx-auto text-center" class="top-para">
-        <p>CHANEL makeup provides a natural and radiant look. Chanel primers pave the way for foundation. Concealers
-            hide imperfections. Liquid, cream, and powder foundations ensure a flawless complexion. Blushes add a touch
-            of color to the cheeks. Illuminating powders give the face instant radiance.
-        </p>
-        <div class="space-line"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 col-sm-12 mx-auto text-center top-para">
+                <p>CHANEL makeup provides a natural and radiant look. Chanel primers pave the way for foundation. Concealers
+                    hide imperfections. Liquid, cream, and powder foundations ensure a flawless complexion. Blushes add a touch
+                    of color to the cheeks. Illuminating powders give the face instant radiance.
+                </p>
+                <div class="space-line"></div>
+            </div>
+        </div>
     </div>
 
     <!-- filter-icons -->
-    <div class="filter-icons-container">
-        <div class="row " id="eContainer"></div>
+    <div class="container">
+        <div class="row filter-icons-container" id="eContainer"></div>
     </div>
 
     <!-- product container -->
@@ -272,7 +302,6 @@
 
     <!-- Add to Cart Sidebar -->
     <div class="add-to-cart-container">
-        <!-- <div id="root"> -->
         <div class="slidebar">
             <div class="head">
                 <p>My Cart</p>
@@ -283,7 +312,6 @@
                 <div id="total">Rs.0.00</div>
             </div>
             <button onclick="checkout()" class="btn btn-checkout">Checkout</button>
-            <!-- </div> -->
         </div>
     </div>
     <!-- Modal for Checkout -->
@@ -301,7 +329,6 @@
         </div>
     </div>
 
-    <img src="assets/images/" alt="">
     <script>
         let eyeMakeup = [
             ["foundation", "assets/images/foundation logo.webp"],
@@ -312,20 +339,17 @@
         ]
         let html = "";
         for (let data of eyeMakeup) {
-            html += ` <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+            html += ` <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
                     <img src="${data[1]}" alt="${data[0]}" class="card-img-top" ><br>
                    <button class="btn filter-btn mt-2" onclick="filterProducts('${data[0]}')">${data[0]}</button>
-
             </div>`
         }
         document.getElementById("eContainer").innerHTML = html;
-
 
         // Makeup Products
         let MakeupProducts = [
             { name: "LES BEIGES FOUNDATION", Image: "assets/images/foundation logo.webp", category: "foundation", details: "HEALTHY GLOW FOUNDATION HYDRATION AND LONGWEAR", price: "Rs. 5,750" },
             { name: "ULTRA LE TEINT VELVET", Image: "assets/images/longwearfoundation.webp", category: "foundation", details: "ULTRA-LIGHT AND LONGWEARING FORMULA WITH A BLURRING MATTE FINISH FOR A PERFECT, NATURAL COMPLEXION", price: "Rs. 4,150" },
-
             { name: "LES BEIGES", Image: "assets/images/gel touch.webp", category: "foundation", details: "HEALTHY GLOW GEL TOUCH FOUNDATION", price: "Rs. 5,500" },
             { name: "ULTRA LE TEINT FLUIDE", Image: "assets/images/comferted foundation.webp", category: "foundation", details: "ULTRAWEAR – ALL-DAY COMFORT – FLAWLESS FINISH FOUNDATION", price: "Rs. 4,100" },
             { name: "BOY DE CHANEL FOUNDATION", Image: "assets/images/longwearing complexion.webp", category: "faundation", details: "SUBTLE AND LONGWEARING COMPLEXION ENHANCER", price: "Rs. 4,150" },
@@ -333,35 +357,31 @@
             { name: "ULTRA LE TEINT", Image: "assets/images/flawless faceaapowder.webp", category: "foundation", details: "ULTRAWEAR – ALL–DAY COMFORT FLAWLESS FINISH COMPACT FOUNDATION", price: "Rs.4,150" },
             { name: "VITALUMIÈRE AQUA", Image: "assets/images/ultra-light.webp", category: "FOUNDATION", details: "ULTRA-LIGHT SKIN PERFECTING MAKEUP SPF 15ULTRA-LIGHT SKIN PERFECTING MAKEUP SPF 15", price: "Rs.4,750" },
             { name: "LES BEIGES WATER-FRESH TINT", Image: "assets/images/water frsh tnt.webp", category: "FOUNDATION", details: "WATER-FRESH TINT WITH MICRO-DROPLET PIGMENTS. BARE SKIN EFFECT. NATURAL AND LUMINOUS HEALTHY GLOW.", price: "Rs. 11,800" },
-
             { name: "SUBLIMAGE L'ESSENCE DE TEINT", Image: "assets/images/scrum teint.webp", category: "foundation", details: "ULTIMATE RADIANCE-GENERATING SERUM FOUNDATION", price: "Rs. 4,100" },
             { name: "SUBLIMAGE LE TEINT", Image: "assets/images/teint creem.webp", category: "FOUNDATION", details: "ULTIMATE RADIANCE-GENERATING CREAM FOUNDATION", price: "Rs. 4,750" },
             { name: "N°1 DE CHANEL REVITALIZING FOUNDATION", Image: "assets/images/hydrates foundation.webp", category: "FOUNDATION", details: "ILLUMINATES - HYDRATES - PROTECTS", price: "Rs.3,800" },
             { name: "CC CREAM", Image: "assets/images/cc cream.webp", category: "FOUNDATION", details: "SUPER ACTIVE COMPLETE CORRECTION SPF 50", price: "Rs.3,800" },
             { name: "ULTRA LE TEINT - REFILL", Image: "assets/images/all day wear facePowder.webp", category: "FOUNDATION", details: "ULTRAWEAR – ALL–DAY COMFORT FLAWLESS FINISH COMPACT FOUNDATION", price: "Rs. 3,950" },
-
             { name: "LES BEIGES HEALTHY GLOW LIP BALM", Image: "assets/images/blush logo.webp", category: "blush", details: "HYDRATING LIP CARE WITH A SUBTLE HEALTHY", price: "Rs. 3,950" },
             { name: "ROUGE ALLURE", Image: "assets/images/intense lip color.webp", category: "blush", details: "LUMINOUS INTENSE LIP COLOUR", price: "Rs. 4,750" },
             { name: "N°1 DE CHANEL LIP AND CHEEK BALM", Image: "assets/images/color enhancer.webp", category: "blush", details: "     ENHANCES COLOUR - NOURISHES -PLUMPS", price: "Rs. 4,750" },
             { name: "LE CRAYON LÈVRES", Image: "assets/images/lip pancil.webp", category: "Lip pencils", details: "LONGWEAR LIP PENCIL", price: "Rs. 3,050" },
             { name: "ROUGE ALLURE VELVET LES PERLES", Image: "assets/images/set of four.webp", category: "Lipsticks", details: "SET OF 4 LUMINOUS MATTE LIP COLOURS –", price: "Rs. 22,900" },
-
         ]
         let html1 = "";
         MakeupProducts.forEach((product, index) => {
             html1 += `
-            <div class="filter-cards col-lg-3 col-md-4 col-sm-12 mb-4 d-flex ">
+            <div class="filter-cards col-lg-3 col-md-4 col-sm-12 mb-4  d-flex justify-content-center">
              <div class="card shadow-sm" style="width: 100%; max-width: 280px;">
                <img src="${product.Image}" class="card-img-top-product" alt="${product.name}">
                <div class="card-body text-center">
                 <h5 class="card-title-product">${product.name}</h5>
                 <p class="card-text-product">${product.details}</p>
                 <p class="card-text-product">${product.price}</p>
-                    <button onclick="addToCart(${index})" class="btn-add-cart" >Add to card</button>
+                    <button onclick="addToCart(${index})" class="btn-add-cart" >Add to cart</button>
         </div>
     </div>
 </div>`;
-
         })
         document.getElementById("products-container").innerHTML = html1
 
@@ -378,7 +398,6 @@
             updateCart();
         }
 
-
         function addToCart(index) {
             let product = MakeupProducts[index]
             cart.push(product);
@@ -389,7 +408,6 @@
             let cartItemsContainer = document.getElementById("cartItem");
             let totalContainer = document.getElementById("total");
             let cartContainer = document.querySelector(".add-to-cart-container")
-
 
             if (cart.length === 0) {
                 cartItemsContainer.innerHTML = "Your cart is empty";
@@ -424,12 +442,6 @@
         }
 
         function decreaseQuantity(index) {
-            if (cart[index].quantity > 1) {
-                cart[index].quantity -= 1;
-            }
-            updateCart();
-        }
-        function removeFromCart(index) {
             cart.splice(index, 1);
             updateCart();
         }
