@@ -10,6 +10,433 @@
         /* body {
             background-color: #adbbda;
         } */
+        :root {
+            --color1: #3D52A0;
+            --color2: #7091E6;
+            --color3: #8697C4;
+            --color4: #ADBBDA;
+            --color5: #EDE8F5;
+            --color6: #e6b7a2;
+            --color7: rgb(227, 34, 98);
+            --color8: rgb(161, 29, 73);
+            --yellow-accent: #F2C849;
+            --blue-accent: #5679C5;
+            --pink-accent: #E6A5C4;
+        }
+        
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+            background-color: white;
+            color: var(--color1);
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+        
+        body::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        body::-webkit-scrollbar-thumb {
+            background-color: #c6a7f4;
+            border-radius: 5px;
+        }
+        
+        body::-webkit-scrollbar-track {
+            background: #fcd0d0;
+        }
+        
+        h1 {
+            text-align: center;
+            font-family: "Gloria Hallelujah", cursive;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 48px;
+            color: #30427b;
+            margin-bottom: 3%;
+        }
+        
+        h1:hover {
+            animation: bounce 0.6s;
+        }
+        
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        header {
+            display: flex;
+            height: 60px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            background: linear-gradient(135deg, var(--color1), #5679C5, #d98cff);
+            color: white;
+            position: relative;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        .search-box {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        
+        .search-box input {
+            padding: 3px 45px;
+            border-radius: 5px;
+            outline: none;
+            border: 2px solid #e0d2f5;
+        }
+        
+        .search-box input:focus {
+            border: 2px solid var(--color7);
+            outline: none;
+        }
+        
+        .searchbutton {
+            position: relative;
+            right: 0px;
+            padding: 5px 6px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        
+        .searchbutton img {
+            height: 24px;
+            width: 34px;
+        }
+        
+        .searchbutton:hover {
+            background-color: #e0d2f5;
+            color: white;
+        }
+        
+        nav a {
+            margin: 0 9px;
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+            display: inline-block;
+        }
+        
+        nav a:hover {
+            color: var(--color7);
+            transform: scale(1.05);
+        }
+        
+        .nav-links {
+            margin: 0 9px;
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+            display: inline-block;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+        }
+        
+        @media (max-width: 992px) {
+            .logo img {
+                height: 40px;
+                width: 100px;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: var(--color1);
+                width: 200px;
+                text-align: center;
+                padding: 10px 0;
+                gap: 10px;
+                z-index: 1000;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                right: 10px;
+                top: 20px;
+                align-items: center;
+                justify-content: center;
+            }
+            .search-box {
+                position: absolute;
+                left: 62%;
+                transform: translateX(-50%);
+                display: flex;
+                align-items: center;
+                max-width: 80%;
+                width: auto;
+                transition: all 0.3s ease-in-out;
+            }
+            .search-box input {
+                padding: 5px;
+                border-radius: 5px;
+                outline: none;
+                border: 2px solid #e0d2f5;
+                width: 0;
+                opacity: 0;
+                transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            }
+            .search-box.active input {
+                width: 150px;
+                opacity: 1;
+            }
+        }
+        
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e0d2f5;
+        }
+        
+        .menu {
+            width: 60%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 8px;
+            color: var(--color1);
+        }
+        
+        .menu a {
+            text-decoration: none;
+            color: #f6688e;
+            transition: color 0.3s;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+        }
+        
+        .menu a:hover {
+            color: var(--color7);
+            transform: scale(1.05);
+        }
+        
+        a {
+            text-emphasis: none;
+            text-decoration: none;
+            color: var(--color1);
+        }
+        
+        .dropdown {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            background-color: #d3bdf7;
+            display: none;
+            overflow-y: auto;
+            z-index: 1000;
+            padding: 10px;
+            text-align: center;
+            font-family: "Gloria Hallelujah", cursive;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 992px) {
+            .menu {
+                width: 100%;
+            }
+            .menu a {
+                font-size: 14px;
+            }
+            .dropdown {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 15px;
+            }
+            .dropdown h2 {
+                font-size: 28px;
+            }
+            .dropdown h5 {
+                font-size: 20px;
+            }
+            .dropdown a {
+                font-size: 16px;
+            }
+            .columns {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                width: 100%;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu {
+                width: 100%;
+            }
+            .dropdown {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 12px;
+            }
+            .dropdown h2 {
+                font-size: 24px;
+            }
+            .dropdown h5 {
+                font-size: 18px;
+            }
+            .dropdown a {
+                font-size: 14px;
+            }
+            .columns {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .menu {
+                width: 100%;
+                gap: 15px;
+            }
+            .dropdown {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 5px !important;
+                margin: 0 !important;
+                overflow-x: hidden;
+            }
+            .dropdown a {
+                font-size: 10px !important;
+            }
+            .dropdown h5 {
+                font-size: 12px !important;
+            }
+            .dropdown h2 {
+                font-size: 17px !important;
+            }
+            .columns {
+                display: flex;
+                flex-direction: column;
+                gap: 5px !important;
+                width: 100%;
+                align-items: center;
+                margin: 5px !important;
+                padding: 0 !important;
+            }
+        }
+        
+        .dropdown h2 {
+            font-family: "Gloria Hallelujah", cursive;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 35px;
+            color: var(--color7);
+            margin-bottom: 1%;
+        }
+        
+        .dropdown h5 {
+            font-weight: 600;
+            font-family: "Gloria Hallelujah", cursive;
+            font-style: normal;
+            font-size: 26px;
+            color: rgb(121, 27, 59);
+        }
+        
+        .columns {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        
+        .column {
+            flex: 1;
+            min-width: 150px;
+            padding: 0 10px;
+        }
+        
+        .dropdown a {
+            margin: 10px 0;
+            line-height: 2;
+            color: var(--color1);
+            font-size: 20px;
+            font-weight: 450;
+            font-family: "Work Sans", sans-serif;
+        }
+        
+        .dropdown a:hover {
+            color: var(--color7);
+        }
+        
+        .dropdown.active {
+            display: block;
+        }
+        
+        .btn-close1 {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--color7);
+            transition: transform 0.3s;
+        }
+        
+        .btn-close1:hover {
+            transform: scale(1.1);
+        }
+        .header-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+        }
+
+
         .header-container {
             position: relative;
             width: 100%;
@@ -278,6 +705,183 @@
 </head>
 
 <body>
+    <header>
+        <div class="logo"><img src="assets/logo.png" alt="Simplon" onclick="window.location.href = 'index.html'"></div>
+        <div class="search-box">
+            <input type="text" placeholder="Search..." id="input">
+            <button class="searchbutton" onclick="search()"><img src="assets/searchicon.png" alt="Search"></button>
+        </div>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home 🏠︎</a>
+                <a href="loginpage.html">Log In</a>
+                <a href="contactus.html">Contact</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="index.html"><img src="assets/cartimage.png" alt="Cart" style="width: 34px; height: 34px;"></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="menu-container">
+        <div class="menu">
+            <a href="#" onclick="toggleDropdown('makeup')">MakeUp</a>
+            <a href="#" onclick="toggleDropdown('hair')">Hair</a>
+            <a href="#" onclick="toggleDropdown('skincare')">SkinCare</a>
+            <a href="#" onclick="toggleDropdown('accessories')">Accessories</a>
+            <a href="#" onclick="toggleDropdown('nail')">Nail</a>
+            <a href="index.html">Kits</a>
+        </div>
+    </div>
+
+    <div class="dropdown" id="makeup">
+        <div class="background"></div>
+        <button type="button" class="btn-close1" onclick="toggleDropdown('makeup')">✖</button>
+        <h2>Makeup</h2>
+        <div class="columns">
+            <div class="column">
+                <h5>Face:</h5>
+                <a href="index.html">Foundation</a><br>
+                <a href="index.html">Bronzer</a><br>
+                <a href="index.html">Highlighter</a><br>
+                <a href="index.html">Blush</a><br>
+                <a href="index.html">Powder</a><br>
+                <a href="index.html">Primer</a><br>
+                <a href="index.html">Concealor</a><br>
+                <a href="index.html">Brushes and Accessories</a><br>
+                <a href="index.html">All Face</a>
+            </div>
+            <div class="column">
+                <h5>Eyes:</h5>
+                <a href="index.html">Mascara</a><br>
+                <a href="index.html">Eyeshadow</a><br>
+                <a href="index.html">Eyeliner</a><br>
+                <a href="index.html">Brow</a><br>
+                <a href="index.html">Brushes and Accessories</a><br>
+                <a href="index.html">All Eyes</a>
+            </div>
+            <div class="column">
+                <h5>Lips:</h5>
+                <a href="index.html">Lipstick</a><br>
+                <a href="index.html">Liquid Lipstick</a><br>
+                <a href="index.html">Lip Gloss</a><br>
+                <a href="index.html">Lip Balm</a><br>
+                <a href="index.html">Lip Liner</a><br>
+                <a href="index.html">Brushes and Accessories</a><br>
+                <a href="index.html">All Lips</a>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown" id="hair">
+        <button type="button" class="btn-close1" onclick="toggleDropdown('hair')">✖</button>
+        <h2>Hair</h2>
+        <div class="columns">
+            <div class="column">
+                <h5>Shampoo:</h5>
+                <a href="index.html">Dryness Care</a><br>
+                <a href="index.html">Intense Repair</a><br>
+                <a href="index.html">Nourishing Oil Care</a><br>
+                <a href="index.html">Hair Fall Rescue</a><br>
+                <a href="index.html">Curly Hair</a><br>
+                <a href="index.html">Wavy Hair</a><br>
+                <a href="index.html">Straight Hair</a><br>
+                <a href="index.html">Silky Hair</a><br>
+                <a href="index.html">All Shampoo</a>
+            </div>
+            <div class="column">
+                <h5>Conditioner:</h5>
+                <a href="index.html">Intense Repair</a><br>
+                <a href="index.html">Hair Fall Rescue</a><br>
+                <a href="index.html">All Conditioner</a>
+            </div>
+            <div class="column">
+                <h5>Colors:</h5>
+                <a href="index.html">Black</a><br>
+                <a href="index.html">Brown</a><br>
+                <a href="index.html">Blonde</a><br>
+                <a href="index.html">Burgundy</a><br>
+                <a href="index.html">Pink</a><br>
+                <a href="index.html">Blue</a><br>
+                <a href="index.html">Purple</a><br>
+                <a href="index.html">Hair Color Restoration</a><br>
+                <a href="index.html">All Colors</a>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown" id="skincare">
+        <button type="button" class="btn-close1" onclick="toggleDropdown('skincare')">✖</button>
+        <h2>Skin Care</h2>
+        <div class="columns">
+            <div class="column">
+                <h5>Categories:</h5>
+                <a href="index.html">Cleansers & Makeup Removers</a><br>
+                <a href="index.html">Toners & Lotion</a><br>
+                <a href="index.html">Serums</a><br>
+                <a href="index.html">Moisturisers</a><br>
+                <a href="index.html">Eye & Lip Care</a><br>
+                <a href="index.html">Sun Protection</a><br>
+                <a href="index.html">Masks & Exfoliators</a><br>
+                <a href="index.html">Oils</a><br>
+                <a href="index.html">Mists</a><br>
+                <a href="index.html">Body Care</a><br>
+                <a href="index.html">All Skin Care</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="dropdown" id="accessories">
+        <button type="button" class="btn-close1" onclick="toggleDropdown('accessories')">✖</button>
+        <h2>Accessories</h2>
+        <div class="columns">
+            <div class="column">
+                <h5>Jewellery:</h5>
+                <a href="index.html">Rings</a><br>
+                <a href="index.html">Bracelets</a><br>
+                <a href="index.html">Earrings</a><br>
+                <a href="index.html">Necklaces</a><br>
+                <a href="index.html">Brooches</a><br>
+                <a href="index.html">All Jewellery</a>
+            </div>
+            <div class="column">
+                <h5>Watches:</h5>
+                <a href="index.html">Women's Watches</a><br>
+                <a href="index.html">Men's Watches</a><br>
+
+                <a href="index.html">All Watches</a>
+            </div>
+            <div class="column">
+                <h5>Fragrances:</h5>
+                <a href="index.html">Women's Perfumes</a><br>
+                <a href="index.html">Men's Perfumes</a><br>
+                <a href="index.html">Uni-sex Perfumes</a><br>
+                <a href="index.html">All Perfumes</a>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown" id="nail">
+        <button type="button" class="btn-close1" onclick="toggleDropdown('nail')">✖</button>
+        <h2>Nails</h2>
+        <div class="columns">
+            <div class="column">
+                <h5>Nail Colors:</h5>
+                <a href="index.html">Nail Color</a><br>
+                <a href="index.html">Base & Finish</a><br>
+                <a href="index.html">All Nails</a>
+            </div>
+            <div class="column">
+                <h5>Nail Art:</h5>
+                <a href="index.html">Nail Color</a><br>
+                <a href="index.html">Base & Finish</a><br>
+                <a href="index.html">All Nails</a>
+            </div>
+
+        </div>
+    </div>
     <!-- header -->
     <div class="container-fluid">
         <div class="row">
@@ -533,6 +1137,36 @@
             })
             document.getElementById("products-container").innerHTML = filteredHTML;
         }
+        
+        // manu
+        function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("show");
+    }
+
+    function search() {
+        toggleSearch();
+    }
+
+    function toggleSearch() {
+        let searchBox = document.querySelector(".search-box");
+        searchBox.classList.toggle("active");
+    }
+
+    function toggleDropdown(category) {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            if (dropdown.id === category) {
+                dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+            } else {
+                dropdown.style.display = 'none';
+            }
+        });
+    }
+
+    function closeDropdown(category) {
+        document.getElementById(category).style.display = 'none';
+    }
+
 
     </script>
     <script src="assets/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
