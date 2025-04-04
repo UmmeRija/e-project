@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lipsticks</title>
+    <title>Nails Makeup</title>
     <link rel="stylesheet" href="assets/bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-</head>
-<style>
-    /* body{
-        background-color: #adbbda;
-    } */
-    :root {
+    <style>
+        /* body {
+            background-color: #adbbda;
+        } */
+        :root {
             --color1: #3D52A0;
             --color2: #7091E6;
             --color3: #8697C4;
@@ -24,7 +23,7 @@
             --blue-accent: #5679C5;
             --pink-accent: #E6A5C4;
         }
-
+        
         body,
         html {
             margin: 0;
@@ -37,20 +36,20 @@
             align-items: center;
             overflow-x: hidden;
         }
-
+        
         body::-webkit-scrollbar {
             width: 10px;
         }
-
+        
         body::-webkit-scrollbar-thumb {
             background-color: #c6a7f4;
             border-radius: 5px;
         }
-
+        
         body::-webkit-scrollbar-track {
             background: #fcd0d0;
         }
-
+        
         h1 {
             text-align: center;
             font-family: "Gloria Hallelujah", cursive;
@@ -60,11 +59,11 @@
             color: #30427b;
             margin-bottom: 3%;
         }
-
+        
         h1:hover {
             animation: bounce 0.6s;
         }
-
+        
         @keyframes bounce {
             0%,
             100% {
@@ -74,7 +73,7 @@
                 transform: translateY(-5px);
             }
         }
-
+        
         header {
             display: flex;
             height: 60px;
@@ -85,30 +84,30 @@
             color: white;
             position: relative;
         }
-
+        
         .logo img {
             height: 50px;
         }
-
+        
         .search-box {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
         }
-
+        
         .search-box input {
             padding: 3px 45px;
             border-radius: 5px;
             outline: none;
             border: 2px solid #e0d2f5;
         }
-
+        
         .search-box input:focus {
             border: 2px solid var(--color7);
             outline: none;
         }
-
+        
         .searchbutton {
             position: relative;
             right: 0px;
@@ -117,17 +116,17 @@
             border-radius: 6px;
             cursor: pointer;
         }
-
+        
         .searchbutton img {
             height: 24px;
             width: 34px;
         }
-
+        
         .searchbutton:hover {
             background-color: #e0d2f5;
             color: white;
         }
-
+        
         nav a {
             margin: 0 9px;
             text-decoration: none;
@@ -135,12 +134,12 @@
             transition: color 0.3s;
             display: inline-block;
         }
-
+        
         nav a:hover {
             color: var(--color7);
             transform: scale(1.05);
         }
-
+        
         .nav-links {
             margin: 0 9px;
             text-decoration: none;
@@ -148,25 +147,25 @@
             transition: color 0.3s;
             display: inline-block;
         }
-
+        
         .nav-links a {
             text-decoration: none;
             color: white;
         }
-
+        
         .hamburger {
             display: none;
             cursor: pointer;
             flex-direction: column;
             gap: 5px;
         }
-
+        
         .hamburger div {
             width: 30px;
             height: 4px;
             background-color: white;
         }
-
+        
         @media (max-width: 992px) {
             .logo img {
                 height: 40px;
@@ -221,14 +220,14 @@
                 opacity: 1;
             }
         }
-
+        
         .menu-container {
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #e0d2f5;
         }
-
+        
         .menu {
             width: 60%;
             max-width: 1200px;
@@ -238,7 +237,7 @@
             padding: 8px;
             color: var(--color1);
         }
-
+        
         .menu a {
             text-decoration: none;
             color: #f6688e;
@@ -247,18 +246,18 @@
             font-size: 16px;
             display: inline-block;
         }
-
+        
         .menu a:hover {
             color: var(--color7);
             transform: scale(1.05);
         }
-
+        
         a {
             text-emphasis: none;
             text-decoration: none;
             color: var(--color1);
         }
-
+        
         .dropdown {
             position: absolute;
             top: 50px;
@@ -273,7 +272,7 @@
             font-family: "Gloria Hallelujah", cursive;
             font-weight: 600;
         }
-
+        
         @media (max-width: 992px) {
             .menu {
                 width: 100%;
@@ -305,7 +304,7 @@
                 align-items: center;
             }
         }
-
+        
         @media (max-width: 768px) {
             .menu {
                 width: 100%;
@@ -334,7 +333,7 @@
                 align-items: center;
             }
         }
-
+        
         @media (max-width: 480px) {
             .menu {
                 width: 100%;
@@ -367,7 +366,7 @@
                 padding: 0 !important;
             }
         }
-
+        
         .dropdown h2 {
             font-family: "Gloria Hallelujah", cursive;
             font-weight: 600;
@@ -376,7 +375,7 @@
             color: var(--color7);
             margin-bottom: 1%;
         }
-
+        
         .dropdown h5 {
             font-weight: 600;
             font-family: "Gloria Hallelujah", cursive;
@@ -384,20 +383,20 @@
             font-size: 26px;
             color: rgb(121, 27, 59);
         }
-
+        
         .columns {
             display: flex;
             justify-content: center;
             gap: 30px;
             margin: 20px 0;
         }
-
+        
         .column {
             flex: 1;
             min-width: 150px;
             padding: 0 10px;
         }
-
+        
         .dropdown a {
             margin: 10px 0;
             line-height: 2;
@@ -406,15 +405,15 @@
             font-weight: 450;
             font-family: "Work Sans", sans-serif;
         }
-
+        
         .dropdown a:hover {
             color: var(--color7);
         }
-
+        
         .dropdown.active {
             display: block;
         }
-
+        
         .btn-close1 {
             position: absolute;
             top: 10px;
@@ -426,7 +425,7 @@
             color: var(--color7);
             transition: transform 0.3s;
         }
-
+        
         .btn-close1:hover {
             transform: scale(1.1);
         }
@@ -437,169 +436,167 @@
             overflow: hidden;
         }
 
-    .header-container {
-        position: relative;
-        width: 100%;
-        display: flex;
-        overflow: hidden;
-    }
+        .header-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+        }
 
-    .page-top {
-        width: 100%;
-        position: relative;
-    }
+        .page-top {
+            width: 100%;
+            position: relative;
+        }
 
-    .page-top img {
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-        margin-bottom: 30px;
-    }
+        .page-top img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            margin-bottom: 30px;
+        }
 
-    .top-para {
-        font-size: 14px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        line-height: 23px;
-        /* margin-bottom: 50px; */
-    }
+        .top-para {
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 23px;
+            /* margin-bottom: 50px; */
+        }
 
-    .filter-icons-container {
-        padding-top: 80px;
-    }
+        .filter-icons-container {
+            padding-top: 80px;
+        }
 
-    #eContainer {
-        margin-bottom: 15px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+        #eContainer {
+            margin-bottom: 15px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
-    .card-img-top {
-        border-radius: 50%;
-        width: 90px;
-        height: 90px;
-        object-fit: cover;
-        background-color: whitesmoke;
-    }
+        .card-img-top {
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            background-color: whitesmoke;
+        }
 
-    .filter-btn {
-        border: 1px solid #f6cae0;
+        .filter-btn {
+            border: 1px solid #f6cae0;
+        }
 
-    }
+        #products-container {
+            margin-top: 20px;
+        }
 
-    #products-container {
-        margin-top: 20px;
-    }
+        .card-product {
+            width: 100%;
+            max-width: 280px;
+            min-height: 360px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+        }
 
-    .card-product {
-        width: 100%;
-        max-width: 280px;
-        min-height: 360px;
-        text-align: center;
-        padding: 15px;
-        border-radius: 10px;
-        transition: 0.3s ease-in-out;
-    }
+        .card-img-top-product {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
 
-    .card-img-top-product {
-        width: 100%;
-        height: 180px;
-        object-fit: contain;
-        border-radius: 8px;
-    }
+        /* Hover effect */
+        .card:hover .card-img-top-product {
+            border-bottom: 3px solid black;
+            padding-bottom: 5px;
+            transition: 0.3s ease-in-out;
+        }
 
-    /* Hover effect */
-    .card:hover .card-img-top-product {
-        border-bottom: 3px solid black;
-        padding-bottom: 5px;
-        transition: 0.3s ease-in-out;
-    }
+        .card-title-product {
+            font-size: 18px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
 
-    .card-title-product {
-        font-size: 18px;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-    }
+        .card-text-product {
+            font-size: 14px;
+            margin-top: auto;
+        }
 
-    .card-text-product {
-        font-size: 14px;
-        margin-top: auto;
+        .card {
+            /* color: var(--color1); */
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(145deg, #e6b7a2, white);
+        }
 
-    }
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(145deg, #E6A5C4, white);
+        }
 
-    .card {
-        /* color: var(--color1); */
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background: linear-gradient(145deg, #e6b7a2, white);
-    }
+        .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-    .card:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        background: linear-gradient(145deg, #E6A5C4, white);
-    }
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
 
-    .card-body {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
 
-    .card {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        text-align: center;
-    }
+        .btn-add-cart {
+            background-color: white;
+            color: black;
+            border: 1px solid whitesmoke;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            width: 100%;
+            max-width: 150px;
+            text-align: center;
+            margin-top: auto;
+        }
 
-    .card-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 1;
-    }
+        .btn-add-cart:hover {
+            background-color: #f6cae0;
+            transform: scale(1.05);
+        }
 
-    .btn-add-cart {
-        background-color: white;
-        color: black;
-        border: 1px solid whitesmoke;
-        padding: 10px 15px;
-        font-size: 14px;
-        font-weight: bold;
-        border-radius: 20px;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        width: 100%;
-        max-width: 150px;
-        text-align: center;
-        margin-top: auto;
-    }
+        .add-to-cart-container {
+            display: none;
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 300px;
+            height: 100vh;
+            padding: 20px;
+            overflow-y: auto;
+        }
 
-    .btn-add-cart:hover {
-        background-color: #f6cae0;
-        transform: scale(1.05);
-    }
-
-    .add-to-cart-container {
-        display: none;
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 300px;
-        height: 100vh;
-        padding: 20px;
-        overflow-y: auto;
-    }
-
-    .slidebar {
+        .slidebar {
             width: 100%;
             height: auto;
             border-radius: 5px;
@@ -658,16 +655,46 @@
             background-color: rgb(161, 29, 73);
         }
 
-    .space-line {
-        border: 1px solid;
-        width: 100%;
-        margin-top: 30px;
-    }
+        .space-line {
+            border: 1px solid;
+            width: 100%;
+            margin-top: 30px;
+        }
 
-    .modal-body {
-        font-family: "Segoe UI"
-    }
-</style>
+        .modal-body {
+            font-family: "Segoe UI"
+        }
+
+        @media (max-width: 768px) {
+            .page-top img {
+                height: 300px;
+            }
+
+            .card-img-top {
+                width: 70px;
+                height: 70px;
+            }
+
+            .page-top img {
+                margin-bottom: 20px;
+            }
+
+            .filter-icons-container {
+                padding-top: 40px;
+            }
+
+            .filter-cards {
+                margin-bottom: 20px;
+            }
+
+            .filter-cards {
+                flex: 0 0 100%;
+                max-width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
 
 <body>
     <header>
@@ -756,4 +783,365 @@
                 <a href="index.html">Wavy Hair</a><br>
                 <a href="index.html">Straight Hair</a><br>
                 <a href="index.html">Silky Hair</a><br>
+                <a href="index.html">All Shampoo</a>
+            </div>
+            <div class="column">
+                <h5>Conditioner:</h5>
+                <a href="index.html">Intense Repair</a><br>
+                <a href="index.html">Hair Fall Rescue</a><br>
+                <a href="index.html">All Conditioner</a>
+            </div>
+            <div class="column">
+                <h5>Colors:</h5>
+                <a href="index.html">Black</a><br>
+                <a href="index.html">Brown</a><br>
+                <a href="index.html">Blonde</a><br>
+                <a href="index.html">Burgundy</a><br>
+                <a href="index.html">Pink</a><br>
+                <a href="index.html">Blue</a><br>
+                <a href="index.html">Purple</a><br>
+                <a href="index.html">Hair Color Restoration</a><br>
+                <a href="index.html">All Colors</a>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown" id="skincare">
+        <button type="button" class="btn-close1" onclick="toggleDropdown('skincare')">✖</button>
+        <h2>Skin Care</h2>
+        <div class="columns">
+            <div class="column">
+                <h5>Categories:</h5>
+                <a href="index.html">Cleansers & Makeup Removers</a><br>
+                <a href="index.html">Toners & Lotion</a><br>
+                <a href="index.html">Serums</a><br>
+                <a href="index.html">Moisturisers</a><br>
+                <a href="index.html">Eye & Lip Care</a><br>
+                <a href="index.html">Sun Protection</a><br>
+                <a href="index.html">Masks & Exfoliators</a><br>
+                <a href="index.html">Oils</a><br>
+                <a href="index.html">Mists</a><br>
+                <a href="index.html">Body Care</a><br>
+                <a href="index.html">All Skin Care</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="dropdown" id="accessories">
+        <button type="button" class="btn-close1" onclick="toggleDropdown('accessories')">✖</button>
+        <h2>Accessories</h2>
+        <div class="columns">
+            <div class="column">
+                <h5>Jewellery:</h5>
+                <a href="index.html">Rings</a><br>
+                <a href="index.html">Bracelets</a><br>
+                <a href="index.html">Earrings</a><br>
+                <a href="index.html">Necklaces</a><br>
+                <a href="index.html">Brooches</a><br>
+                <a href="index.html">All Jewellery</a>
+            </div>
+            <div class="column">
+                <h5>Watches:</h5>
+                <a href="index.html">Women's Watches</a><br>
+                <a href="index.html">Men's Watches</a><br>
+
+                <a href="index.html">All Watches</a>
+            </div>
+            <div class="column">
+                <h5>Fragrances:</h5>
+                <a href="index.html">Women's Perfumes</a><br>
+                <a href="index.html">Men's Perfumes</a><br>
+                <a href="index.html">Uni-sex Perfumes</a><br>
+                <a href="index.html">All Perfumes</a>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown" id="nail">
+        <button type="button" class="btn-close1" onclick="toggleDropdown('nail')">✖</button>
+        <h2>Nails</h2>
+        <div class="columns">
+            <div class="column">
+                <h5>Nail Colors:</h5>
+                <a href="index.html">Nail Color</a><br>
+                <a href="index.html">Base & Finish</a><br>
+                <a href="index.html">All Nails</a>
+            </div>
+            <div class="column">
+                <h5>Nail Art:</h5>
+                <a href="index.html">Nail Color</a><br>
+                <a href="index.html">Base & Finish</a><br>
+                <a href="index.html">All Nails</a>
+            </div>
+
+        </div>
+    </div>
+    <!-- header -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 px-0">
+                <div class="header-container">
+                    <div class="page-top">
+                        <img src="assets/images/mainNailpolish.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 col-sm-12 mx-auto text-center top-para">
+                <p>CHANEL nail polish protects, beautifies, and makes vibrant colors dazzle. Its ultra-durable formula gives it long wear. Each fine and ultra-shiny coat of CHANEL nail varnish offers a high-gloss look and perfectly even coverage. Following a thin coat of LA BASE, brush on one or two coats of LE VERNIS by CHANEL for flawless coverage.
+                </p>
+                <div class="space-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- filter-icons -->
+    <div class="container">
+        <div class="row filter-icons-container" id="eContainer"></div>
+    </div>
+
+    <!-- product container -->
+    <div class="container">
+        <div class="row justify-content-center" id="products-container"></div>
+    </div>
+
+    <!-- Add to Cart Sidebar -->
+    <div class="add-to-cart-container">
+        <div class="slidebar">
+            <div class="head">
+                <p>My Cart</p>
+            </div>
+            <div id="cartItem">Your cart is empty</div>
+            <div class="foot">
+                <h3><strong>Total</strong></h3>
+                <div id="total">Rs.0.00</div>
+            </div>
+            <button onclick="checkout()" class="btn btn-checkout">Checkout</button>
+        </div>
+    </div>
+    <!-- Modal for Checkout -->
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content"
+                style="background: linear-gradient(145deg, #E6A5C4 , white); color: #b24242; border: 1px solid rgb(161, 29, 73);">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="checkoutModalLabel">Order placed.</h5>
+                </div>
+                <div class="modal-body">
+                    Thank you for shopping at Simplon!
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- <img src="assets/images/bright skin logo.jpg" alt=""> -->
+    <script>
+        let eyeMakeup = [
+            ["Bright Skin", "assets/images/foundation logo.webp"],
+            ["Sand Skin", "assets/images/comferted foundation.webp"],
+            ["Nutral Skin ", "assets/images/hydrates foundation.webp"],
+            ["Warm Skin", "assets/images/water frsh tnt.webp"]
+        ]
+        let html = "";
+        for (let data of eyeMakeup) {
+            html += ` <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+                    <img src="${data[1]}" alt="${data[0]}" class="card-img-top" ><br>
+                   <button class="btn filter-btn mt-2" onclick="filterProducts('${data[0]}')">${data[0]}</button>
+            </div>`
+        }
+        document.getElementById("eContainer").innerHTML = html;
+
+        // Makeup Products
+        let MakeupProducts = [
+            // Bright Skin
+            { name: "LES BEIGES FOUNDATION", Image: "assets/images/foundation logo.webp", category: "bright skin", details: "HEALTHY GLOW FOUNDATION HYDRATION AND LONGWEAR", price: "Rs. 5,750" },
+            { name: "BOY DE CHANEL FOUNDATION", Image: "assets/images/longwearing complexion.webp", category: "bright skin", details: "SUBTLE AND LONGWEARING COMPLEXION ENHANCER", price: "Rs. 4,150" },
+            { name: "JOUES CONTRASTE", Image: "assets/images/blush logo.webp", category: "bright skin", details: "POWDER BLUSH", price: "Rs. 5,300" },
+            { name: "LES BEIGES BLUSH STICK", Image: "assets/images/blushStick.webp", category: "bright skin", details: "SHEER BLUSH IN A STICK FOR A HEALTHY GLOW.", price: "Rs. 4,750" },
+            { name: "LES BEIGES WATER-FRESH BLUSH", Image: "assets/images/gliterBlush.webp", category: "bright skin", details: "WATER-FRESH HYDRATING BLUSH WITH MICRO-DROPLET PIGMENTS, NATURAL, HEALTHY-LOOKING, LIT-FROM-WITHIN GLOW", price: "Rs. 4,750" },
             
+            { name: "LE VERNIS", Image: "assets/images/golden.webp", category: "nail polish", details: "NAIL COLOUR ", price: "Rs.  3,200" },
+            { name: "LE VERNIS ", Image: "assets/images/red.webp", category: "nail polish", details: "NAIL COLOUR ", price: "Rs. 3,200" },
+            { name: "LE VERNIS ", Image: "assets/images/light brown.webp", category: "nail polish", details: "NAIL COLOUR", price: "Rs. 3,200" },
+            { name: "LE VERNIS ", Image: "assets/images/light pink.webp", category: "nail polish", details: "NAIL COLOUR", price: "Rs 3,200" },
+            { name: "LE VERNIS", Image: "assets/images/pinkish.webp", category: "nail polish", details: "NAIL COLOUR", price: "Rs 3,200" },
+            { name: "LE VERNIS", Image: "assets/images/gray.webp", category: "nail polish", details: "NAIL COLOUR", price: "Rs. 3,200" },
+            { name: "LE VERNIS ", Image: "assets/images/blood red.webp", category: "nail polish", details: "NAIL COLOUR", price: "Rs. 3,200" },
+            { name: "LE VERNIS ", Image: "assets/images/navy blue.webp", category: "nail polish", details: "NAIL COLOUR", price: "Rs. 3,200" },
+            { name: "LE VERNIS ", Image: "assets/images/dark red.webp", category: "nail polish", details: "NAIL COLOUR", price: "Rs. 3,200" },
+            { name: "LE VERNIS ", Image: "assets/images/dark pink.webp", category: "nail polish", details: "NAIL COLOUR", price: "Rs. 3,200" },
+            { name: "LE VERNIS ", Image: "assets/images/light yellow.webp", category: "nail polish", details: "NAIL COLOUR", price: "Rs. 3,200" },
+            { name: "LE VERNIS ", Image: "assets/images/rose pink.webp", category: "nail polish", details: "NAIL COLOUR", price: "Rs. 3,200" },
+            { name: "LE VERNIS ", Image: "assets/images/pink to purple.webp", category: "nail polish", details: "NAIL COLOUR", price: "Rs. 3,200" },
+            { name: "LE VERNIS ", Image: "assets/images/light purple.webp", category: "nail polish", details: "NAIL COLOUR", price: "Rs. 3,200" },
+            { name: "LE VERNIS ", Image: "assets/images/ciment.webp", category: "nail polish", details: "NAIL COLOUR", price: "Rs. 3,200" },
+            { name: "LE VERNIS ", Image: "assets/images/rose red.webp", category: "nail polish", details: "NAIL COLOUR", price: "Rs. 3,200" },
+        
+            { name: "LE DISSOLVANT DOUCEUR", Image: "assets/images/nail remover.webp", category: "manicure", details: "GENTLE NAIL ENAMEL REMOVER", price: "Rs. 2,500" },
+            { name: "L'HUILE CAMÉLIA", Image: "assets/images/nail oil.webp", category: "manicure", details: "LACQUERED FINISH ENHANCED PROTECTION", price: "Rs. 3,200" },
+            { name: "LE GEL COAT", Image: "assets/images/base coat.webp", category: "manicure", details: "HYDRATING & FORTIFYING OIL", price: "Rs. 3,200" },
+            { name: "LA BASE CAMÉLIA", Image: "assets/images/manicure logo.webp", category: "manicure", details: "FORTIFYING, PROTECTING AND SMOOTHING BASE COAT", price: "Rs. 3,200" },
+        ]
+        let html1 = "";
+        MakeupProducts.forEach((product, index) => {
+            html1 += `
+            <div class="filter-cards col-lg-3 col-md-4 col-sm-12 mb-4 d-flex justify-content-center">
+             <div class="card shadow-sm" style="width: 100%; max-width: 280px;">
+               <img src="${product.Image}" class="card-img-top-product" alt="${product.name}">
+               <div class="card-body text-center">
+                <h5 class="card-title-product">${product.name}</h5>
+                <p class="card-text-product">${product.details}</p>
+                <p class="card-text-product">${product.price}</p>
+                    <button onclick="addToCart(${index})" class="btn-add-cart" >Add to cart</button>
+        </div>
+    </div>
+</div>`;
+        })
+        document.getElementById("products-container").innerHTML = html1
+
+        // Add to cart
+        let cart = [];
+        function addToCart(name, price, image) {
+            let existingItem = cart.find(item => item.name === name);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, Image: image, quantity: 1 });
+            }
+            updateCart();
+        }
+
+        function addToCart(index) {
+            let product = MakeupProducts[index]
+            cart.push(product);
+            updateCart();
+        }
+
+        function updateCart() {
+            let cartItemsContainer = document.getElementById("cartItem");
+            let totalContainer = document.getElementById("total");
+            let cartContainer = document.querySelector(".add-to-cart-container")
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = "Your cart is empty";
+                totalContainer.innerHTML = "Rs. 0.00";
+                cartContainer.style.display = "none";
+                return;
+            }
+
+            cartContainer.style.display = "block";
+
+            let cartHTML = '<div class = "cart-item">';
+            let totalPrice = 0;
+
+            cart.forEach((item, index) => {
+                let price = parseFloat(item.price.replace("Rs.", "").replace(",", ""));
+                totalPrice += price;
+                cartHTML += `
+            <div class="cart-item">
+                <img src="${item.Image}" alt="${item.name}" style="width: 50px; height: 50px; object-fit: cover; margin-right: 10px; border-radius: 5px;">
+                <p>${item.name} - ${item.price}</p>
+                <button onclick="removeFromCart(${index})" class="btn btn-remove btn-sm">Remove</button>
+            </div>`;
+            });
+
+            cartItemsContainer.innerHTML = cartHTML;
+            totalContainer.innerHTML = `Rs. ${totalPrice.toLocaleString()}`;
+        }
+
+        function increaseQuantity(index) {
+            cart[index].quantity += 1;
+            updateCart();
+        }
+
+        function decreaseQuantity(index) {
+            if (cart[index].quantity > 1) {
+                cart[index].quantity -= 1;
+            }
+            updateCart();
+        }
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+        //  Checkout
+        function checkout() {
+            if (cart.length === 0) return;
+            function checkout() {
+
+            }
+            console.log("Checkout completed");
+
+            // modal
+            var checkoutModal = new bootstrap.Modal(document.getElementById('checkoutModal'));
+            checkoutModal.show();
+
+            // alert("Thanks for shopping!");
+            window.location.reload(); // Reloads the page
+        }
+
+
+        // filter products
+        function filterProducts(category) {
+            let filteredProducts = MakeupProducts.filter(product => product.category && product.category.toLowerCase() === category.toLowerCase())
+
+            if (filteredProducts.length === 0) {
+                document.getElementById("products-container").innerHTML = '<p class="text-center">No product is found in this catagory.</p>'
+                return;
+            }
+            let filteredHTML = "";
+            filteredProducts.forEach((product, index) => {
+                filteredHTML += `<div class="filter-cards col-lg-3 col-md-4 col-sm-12 mb-4 d-flex ">
+             <div class="card shadow-sm" style="width: 100%; max-width: 280px;">
+               <img src="${product.Image}" class="card-img-top-product" alt="${product.name}">
+               <div class="card-body text-center">
+                <h5 class="card-title-product">${product.name}</h5>
+                <p class="card-text-product">${product.details}</p>
+                <p class="card-text-product">${product.price}</p>
+                    <button onclick="addToCart(${index})" class="btn-add-cart" >Add to card</button>
+        </div>
+    </div>
+</div>`
+
+            })
+            document.getElementById("products-container").innerHTML = filteredHTML;
+        }
+        
+        // manu
+        function toggleMenu() {
+        document.querySelector(".nav-links").classList.toggle("show");
+    }
+
+    function search() {
+        toggleSearch();
+    }
+
+    function toggleSearch() {
+        let searchBox = document.querySelector(".search-box");
+        searchBox.classList.toggle("active");
+    }
+
+    function toggleDropdown(category) {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(dropdown => {
+            if (dropdown.id === category) {
+                dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+            } else {
+                dropdown.style.display = 'none';
+            }
+        });
+    }
+
+    function closeDropdown(category) {
+        document.getElementById(category).style.display = 'none';
+    }
+
+
+    </script>
+    <script src="assets/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <img src="" alt="">
+</body>
+
+</html>   
